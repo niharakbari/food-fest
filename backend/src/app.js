@@ -23,11 +23,15 @@ app.get('/', (req, res) => {
 const eventRoutes = require('./routes/EventRoutes');
 const categoryRoutes = require('./routes/CategoryRoutes');
 const chefRoutes = require('./routes/ChefRoutes');
+const journeyRoutes = require('./routes/JourneyRoutes');
+const galleryRoutes = require('./routes/GalleryRoutes');
 
 // Routes will be registered here later
 app.use('/api/v1/events', eventRoutes);
 app.use('/api/v1/categories', categoryRoutes);
 app.use('/api/v1/chefs', chefRoutes);
+app.use('/api/v1/journeys', journeyRoutes);
+app.use('/api/v1/gallery', galleryRoutes);
 
 // Handle undefined routes
 app.all(/(.*)/, (req, res, next) => {

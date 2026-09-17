@@ -29,6 +29,26 @@ const EventModel = {
         `;
         const [rows] = await db.execute(query, [id]);
         return rows[0] || null;
+    },
+
+    createEvent: async (eventData) => {
+        const { name, description, event_date, start_time, end_time, location, image_url, status, category_id } = eventData;
+        const query = 'INSERT INTO events (name, description, event_date, start_time, end_time, location, image_url, status, category_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+        const [result] = await db.execute(query, [name, description, event_date, start_time, end_time, location, image_url, status, category_id]);
+        return result.insertId;
+    },
+
+    updateEvent: async (id, eventData) => {
+        const { name, description, event_date, start_time, end_time, location, image_url, status, category_id } = eventData;
+        const query = 'UPDATE events SET name = ?, description = ?, event_date = ?, start_time = ?, end_time = ?, location = ?, image_url = ?, status = ?, category_id = ? WHERE id = ?';
+        const [result] = await db.execute(query, [name, description, event_date, start_time, end_time, location, image_url, status, category_id, id]);
+        return result.affectedRows;
+    },
+
+    deleteEvent: async (id) => {
+        const query = 'DELETE FROM events WHERE id = ?';
+        const [result] = await db.execute(query, [id]);
+        return result.affectedRows;
     }
 };
 

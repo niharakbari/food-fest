@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Fest | Admin Portal</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="custom-cursor"></div>
+
+  <nav class="navbar">
+    <div class="logo">Food Fest. <span style="font-size:0.65rem; letter-spacing:0.1em; opacity:0.6; font-family: var(--font-sans);">ADMIN</span></div>
+    <div class="nav-links">
+      <a href="#live-events">Events</a>
+      <a href="#chefs">Chefs</a>
+      <a href="/">← Back to Site</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="section-hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Good food.<br/>Great people.<br/><span class="highlight">Unforgettable<br/>moments.</span></h1>
+        <p class="hero-intro">Welcome to the ultimate gastronomic gathering. Join us for a weekend of extraordinary flavors and culinary artistry.</p>
+        <button class="cta-button primary" onclick="document.getElementById('live-events').scrollIntoView({behavior: 'smooth'})">EXPLORE EVENTS →</button>
+      </div>
+      <div class="hero-image-wrapper">
+        <!-- Large owner photo -->
+        <img class="hero-image" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=1000&q=80" alt="Founder of Food Fest" />
+        <div class="floating-badge">Taste The Magic</div>
+      </div>
+    </section>
+
+    <!-- STORY SECTION -->
+    <section id="story" class="section-story">
+      <div class="story-container">
+        <h2 class="section-heading">Our Journey</h2>
+        <div class="timeline" id="journey-container">
+          <!-- Journeys injected via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section id="categories" class="section-categories">
+      <h2 class="section-heading centered">WHAT ARE YOU CRAVING?</h2>
+      <div class="category-grid" id="category-container">
+        <!-- Categories injected via JS -->
+      </div>
+    </section>
+
+    <!-- LIVE EVENTS SECTION -->
+    <section id="live-events" class="section-events">
+      <h2 class="section-heading">WHAT'S COOKING?</h2>
+      <div class="events-list" id="events-container">
+        <!-- Events injected via JS -->
+      </div>
+    </section>
+
+    <!-- CHEFS SECTION -->
+    <section id="chefs" class="section-chefs">
+      <h2 class="section-heading">MEET THE MAKERS</h2>
+      <div class="chefs-grid" id="chefs-container">
+        <!-- Chefs injected via JS -->
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="section-gallery">
+      <h2 class="section-heading centered">THE EXPERIENCE</h2>
+      <div class="masonry-gallery" id="gallery-container">
+        <!-- Images injected via JS -->
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="final-cta" class="section-cta">
+      <div class="cta-content">
+        <h2>COME HUNGRY.<br/>LEAVE HAPPY.</h2>
+        <button class="cta-button secondary" onclick="window.scrollTo({top:0, behavior:'smooth'})">EXPLORE FOOD EVENTS →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Food Fest.</div>
+      <p class="footer-copy">&copy; 2027 Food Fest. Admin Portal.</p>
+    </div>
+  </footer>
+
+  <!-- Custom Admin Modal -->
+  <div id="custom-modal-overlay" class="custom-modal-overlay hidden">
+    <div class="custom-modal">
+      <div class="custom-modal-header">
+        <h3 id="custom-modal-title">Edit</h3>
+        <button id="custom-modal-close" class="custom-modal-close">&times;</button>
+      </div>
+      <div class="custom-modal-body" id="custom-modal-body">
+        <!-- Inputs injected via JS -->
+      </div>
+      <div class="custom-modal-footer">
+        <button id="custom-modal-cancel" class="cta-button secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Cancel</button>
+        <button id="custom-modal-confirm" class="cta-button primary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/admin.js"></script>
+</body>
+</html>

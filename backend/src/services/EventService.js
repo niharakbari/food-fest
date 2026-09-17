@@ -14,6 +14,18 @@ const EventService = {
             throw new AppError('Event not found', 404);
         }
         return event;
+    },
+
+    createEvent: async (eventData) => {
+        return await EventModel.createEvent(eventData);
+    },
+
+    updateEvent: async (id, eventData) => {
+        return await EventModel.updateEvent(id, eventData);
+    },
+
+    deleteEvent: async (id) => {
+        return await EventModel.deleteEvent(id);
     }
 };
 

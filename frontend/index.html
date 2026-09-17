@@ -3,85 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food Fest | Unforgettable Moments</title>
+  <title>Food Fest | Unforgettable Culinary Experiences</title>
+  <meta name="description" content="Food Fest is the ultimate gastronomic gathering — two days of extraordinary flavors, world-class chefs, and live culinary art." />
   <link rel="stylesheet" href="/src/style.css" />
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+
   <div class="custom-cursor"></div>
 
+  <!-- NAV -->
   <nav class="navbar">
-    <div class="logo">FOOD FEST.</div>
+    <div class="logo">Food Fest.</div>
     <div class="nav-links">
       <a href="#live-events">Events</a>
       <a href="#chefs">Chefs</a>
-      <button class="nav-cta">Get Tickets</button>
+      <a href="#gallery">Gallery</a>
+      <button class="nav-cta" onclick="document.getElementById('live-events').scrollIntoView({behavior:'smooth'})">Get Tickets</button>
     </div>
   </nav>
 
   <main>
-    <!-- HERO SECTION -->
+
+    <!-- HERO -->
     <section id="hero" class="section-hero">
       <div class="hero-content">
-        <h1 class="hero-title">Good food.<br/>Great people.<br/><span class="highlight">Unforgettable<br/>moments.</span></h1>
-        <p class="hero-intro">Welcome to the ultimate gastronomic gathering. Join us for a weekend of extraordinary flavors and culinary artistry.</p>
-        <button class="cta-button primary" onclick="document.getElementById('live-events').scrollIntoView({behavior: 'smooth'})">EXPLORE EVENTS →</button>
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-dot"></div>
+          <span class="label">Now open for 2027</span>
+        </div>
+        <h1 class="hero-title">
+          Good food.<br/>
+          Great people.<br/>
+          <span class="highlight">Unforgettable<br/>moments.</span>
+        </h1>
+        <p class="hero-intro">
+          The ultimate gastronomic gathering. Two days of extraordinary flavors,
+          world-class chefs, and culinary artistry that you won't forget.
+        </p>
+        <button class="cta-button primary" onclick="document.getElementById('live-events').scrollIntoView({behavior:'smooth'})">
+          Explore Events &rarr;
+        </button>
       </div>
-      <div class="hero-image-wrapper">
-        <!-- Large owner photo -->
-        <img class="hero-image" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=1000&q=80" alt="Founder of Food Fest" />
-        <div class="floating-badge">Taste The Magic</div>
+
+      <div class="hero-image-col">
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number">40+</span>
+            <span class="hero-stat-label">Chefs</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">3K</span>
+            <span class="hero-stat-label">Attendees</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">2</span>
+            <span class="hero-stat-label">Days</span>
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <img class="hero-image" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=1000&q=80" alt="Executive Chef at Food Fest" />
+          <div class="floating-badge">Taste The<br/>Magic</div>
+        </div>
       </div>
     </section>
 
-    <!-- STORY SECTION -->
+    <!-- STORY / JOURNEY SECTION -->
     <section id="story" class="section-story">
       <div class="story-container">
-        <h2 class="section-heading">Our Journey</h2>
-        <div class="timeline">
-          <div class="timeline-line"></div>
-          
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>2019</h3>
-              <p>A small street cart dream.</p>
-            </div>
-            <div class="timeline-image">
-              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&q=80" alt="Street cart">
-            </div>
-          </div>
-          
-          <div class="timeline-item right">
-            <div class="timeline-content">
-              <h3>2022</h3>
-              <p>The first local festival.</p>
-            </div>
-            <div class="timeline-image">
-              <img src="https://images.unsplash.com/photo-1533612808240-df5cc092404b?w=500&q=80" alt="Local festival">
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h3>Today</h3>
-              <p>The biggest culinary event of the year.</p>
-            </div>
-            <div class="timeline-image">
-              <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f3?w=500&q=80" alt="Big festival">
-            </div>
-          </div>
-          
+        <div class="story-header">
+          <h2 class="section-heading">Our<br/>Journey</h2>
+          <p class="story-tagline">From a small street cart to the biggest culinary celebration in the region. Here's how it all happened.</p>
+        </div>
+        <div class="timeline" id="journey-container">
+          <!-- Journeys injected via JS -->
         </div>
       </div>
     </section>
 
     <!-- CATEGORIES SECTION -->
     <section id="categories" class="section-categories">
-      <h2 class="section-heading centered">WHAT ARE YOU CRAVING?</h2>
+      <h2 class="section-heading">What are you<br/>craving?</h2>
       <div class="category-grid" id="category-container">
         <!-- Categories injected via JS -->
       </div>
@@ -89,7 +93,7 @@
 
     <!-- LIVE EVENTS SECTION -->
     <section id="live-events" class="section-events">
-      <h2 class="section-heading">WHAT'S COOKING?</h2>
+      <h2 class="section-heading">What's<br/>cooking?</h2>
       <div class="events-list" id="events-container">
         <!-- Events injected via JS -->
       </div>
@@ -97,35 +101,50 @@
 
     <!-- CHEFS SECTION -->
     <section id="chefs" class="section-chefs">
-      <h2 class="section-heading">MEET THE MAKERS</h2>
-      <div class="chefs-grid" id="chefs-container">
-        <!-- Chefs injected via JS -->
+      <div class="chefs-inner">
+        <h2 class="section-heading">Meet the<br/>makers</h2>
+        <div class="chefs-grid" id="chefs-container">
+          <!-- Chefs injected via JS -->
+        </div>
       </div>
     </section>
 
     <!-- GALLERY SECTION -->
     <section id="gallery" class="section-gallery">
-      <h2 class="section-heading centered">THE EXPERIENCE</h2>
-      <div class="masonry-gallery">
-        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80" class="m-item" />
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80" class="m-item" />
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" class="m-item" />
-        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80" class="m-item" />
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" class="m-item" />
+      <div class="gallery-header">
+        <h2 class="section-heading">The<br/>Experience</h2>
+        <p class="label" style="padding-bottom: 0.5rem; max-width: 28ch; text-align: right; line-height: 1.6;">
+          Two days. Hundreds of dishes.<br/>Memories that last forever.
+        </p>
+      </div>
+      <div class="masonry-gallery" id="gallery-container">
+        <!-- Images injected via JS -->
       </div>
     </section>
 
     <!-- FINAL CTA -->
     <section id="final-cta" class="section-cta">
       <div class="cta-content">
-        <h2>COME HUNGRY.<br/>LEAVE HAPPY.</h2>
-        <button class="cta-button secondary" onclick="window.scrollTo({top:0, behavior:'smooth'})">EXPLORE FOOD EVENTS →</button>
+        <h2>Come hungry.<br/>Leave happy.</h2>
+        <button class="cta-button secondary" onclick="document.getElementById('live-events').scrollIntoView({behavior:'smooth'})">
+          Get Your Tickets &rarr;
+        </button>
       </div>
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; 2027 Food Fest. All rights reserved.</p>
+    <div class="footer-inner">
+      <div class="footer-logo">Food Fest.</div>
+      <div class="footer-links">
+        <a href="#live-events">Events</a>
+        <a href="#chefs">Chefs</a>
+        <a href="#gallery">Gallery</a>
+        <a href="/admin.html">Admin</a>
+      </div>
+      <p class="footer-copy">&copy; 2027 Food Fest. All rights reserved.</p>
+    </div>
   </footer>
 
   <script type="module" src="/src/main.js"></script>
