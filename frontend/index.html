@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Fest | Unforgettable Moments</title>
+  <link rel="stylesheet" href="/src/style.css" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="custom-cursor"></div>
+
+  <nav class="navbar">
+    <div class="logo">FOOD FEST.</div>
+    <div class="nav-links">
+      <a href="#live-events">Events</a>
+      <a href="#chefs">Chefs</a>
+      <button class="nav-cta">Get Tickets</button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="section-hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Good food.<br/>Great people.<br/><span class="highlight">Unforgettable<br/>moments.</span></h1>
+        <p class="hero-intro">Welcome to the ultimate gastronomic gathering. Join us for a weekend of extraordinary flavors and culinary artistry.</p>
+        <button class="cta-button primary" onclick="document.getElementById('live-events').scrollIntoView({behavior: 'smooth'})">EXPLORE EVENTS →</button>
+      </div>
+      <div class="hero-image-wrapper">
+        <!-- Large owner photo -->
+        <img class="hero-image" src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=1000&q=80" alt="Founder of Food Fest" />
+        <div class="floating-badge">Taste The Magic</div>
+      </div>
+    </section>
+
+    <!-- STORY SECTION -->
+    <section id="story" class="section-story">
+      <div class="story-container">
+        <h2 class="section-heading">Our Journey</h2>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>2019</h3>
+              <p>A small street cart dream.</p>
+            </div>
+            <div class="timeline-image">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&q=80" alt="Street cart">
+            </div>
+          </div>
+          
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <h3>2022</h3>
+              <p>The first local festival.</p>
+            </div>
+            <div class="timeline-image">
+              <img src="https://images.unsplash.com/photo-1533612808240-df5cc092404b?w=500&q=80" alt="Local festival">
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Today</h3>
+              <p>The biggest culinary event of the year.</p>
+            </div>
+            <div class="timeline-image">
+              <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f3?w=500&q=80" alt="Big festival">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES SECTION -->
+    <section id="categories" class="section-categories">
+      <h2 class="section-heading centered">WHAT ARE YOU CRAVING?</h2>
+      <div class="category-grid" id="category-container">
+        <!-- Categories injected via JS -->
+      </div>
+    </section>
+
+    <!-- LIVE EVENTS SECTION -->
+    <section id="live-events" class="section-events">
+      <h2 class="section-heading">WHAT'S COOKING?</h2>
+      <div class="events-list" id="events-container">
+        <!-- Events injected via JS -->
+      </div>
+    </section>
+
+    <!-- CHEFS SECTION -->
+    <section id="chefs" class="section-chefs">
+      <h2 class="section-heading">MEET THE MAKERS</h2>
+      <div class="chefs-grid" id="chefs-container">
+        <!-- Chefs injected via JS -->
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="section-gallery">
+      <h2 class="section-heading centered">THE EXPERIENCE</h2>
+      <div class="masonry-gallery">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80" class="m-item" />
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80" class="m-item" />
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80" class="m-item" />
+        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80" class="m-item" />
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" class="m-item" />
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section id="final-cta" class="section-cta">
+      <div class="cta-content">
+        <h2>COME HUNGRY.<br/>LEAVE HAPPY.</h2>
+        <button class="cta-button secondary" onclick="window.scrollTo({top:0, behavior:'smooth'})">EXPLORE FOOD EVENTS →</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2027 Food Fest. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
